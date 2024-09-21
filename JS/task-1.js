@@ -1,14 +1,11 @@
-console.log("task-1.js is running");
-
 function makeTransaction(quantity, pricePerDroid) {
     const totalPrice = quantity * pricePerDroid;
-    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+
+    if (confirm(`Ви замовили ${quantity} дроїдів за ${totalPrice} кредитів. Підтвердити?`)) {
+        alert(`Ви замовили ${quantity} дроїдів за ${totalPrice} кредитів!`);
+        document.getElementById('output').innerHTML += `Замовлення: ${quantity} дроїдів за ${totalPrice} кредитів.<br>`;
+    }
 }
 
-const quantity = 5;
-const pricePerDroid = 3000;
-const message = makeTransaction(quantity, pricePerDroid);
-
-if (confirm("Чи хочете ви побачити результат?")) {
-    alert(message);
-}
+// Виклик функції для перевірки
+makeTransaction(5, 3000);

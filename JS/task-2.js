@@ -1,15 +1,11 @@
-console.log("task-1.js is running");
-
 function getShippingMessage(country, price, deliveryFee) {
     const totalPrice = price + deliveryFee;
-    return `Shipping to ${country} will cost ${totalPrice} credits`;
+
+    if (confirm(`Доставка в ${country} коштує ${totalPrice} кредитів. Підтвердити?`)) {
+        alert(`Доставка в ${country} коштує ${totalPrice} кредитів.`);
+        document.getElementById('output').innerHTML += `Доставка в ${country}: ${totalPrice} кредитів.<br>`;
+    }
 }
 
-const country = "Australia";
-const price = 120;
-const deliveryFee = 50;
-const message = getShippingMessage(country, price, deliveryFee);
-
-if (confirm("Чи хочете ви побачити результат?")) {
-    alert(message);
-}
+// Виклик функції для перевірки
+getShippingMessage("Australia", 120, 50);
