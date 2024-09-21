@@ -3,8 +3,10 @@ function makeTransaction(quantity, pricePerDroid) {
     return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
 }
 
-// Виведення результатів на сторінку
-const outputDiv = document.getElementById("output");
-outputDiv.innerHTML += makeTransaction(5, 3000) + "<br>";
-outputDiv.innerHTML += makeTransaction(3, 1000) + "<br>";
-outputDiv.innerHTML += makeTransaction(10, 500) + "<br>";
+const quantity = 5;
+const pricePerDroid = 3000;
+const message = makeTransaction(quantity, pricePerDroid);
+
+if (confirm("Чи хочете ви побачити результат?")) {
+    alert(message);
+}

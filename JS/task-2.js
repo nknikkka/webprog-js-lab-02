@@ -3,7 +3,11 @@ function getShippingMessage(country, price, deliveryFee) {
     return `Shipping to ${country} will cost ${totalPrice} credits`;
 }
 
-// Виведення результатів на сторінку
-outputDiv.innerHTML += getShippingMessage("Australia", 120, 50) + "<br>";
-outputDiv.innerHTML += getShippingMessage("Germany", 80, 20) + "<br>";
-outputDiv.innerHTML += getShippingMessage("Sweden", 100, 20) + "<br>";
+const country = "Australia";
+const price = 120;
+const deliveryFee = 50;
+const message = getShippingMessage(country, price, deliveryFee);
+
+if (confirm("Чи хочете ви побачити результат?")) {
+    alert(message);
+}
