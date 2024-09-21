@@ -1,3 +1,5 @@
+console.log("task-1.js is running");
+
 function getElementWidth(content, padding, border) {
     const contentWidth = parseFloat(content);
     const paddingWidth = parseFloat(padding) * 2;

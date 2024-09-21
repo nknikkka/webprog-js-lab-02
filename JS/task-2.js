@@ -1,3 +1,5 @@
+console.log("task-1.js is running");
+
 function getShippingMessage(country, price, deliveryFee) {
     const totalPrice = price + deliveryFee;
     return `Shipping to ${country} will cost ${totalPrice} credits`;
