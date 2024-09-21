@@ -1,13 +1,12 @@
 function getShippingMessage(country, price, deliveryFee) {
     const totalPrice = price + deliveryFee;
 
-    if (confirm(`Доставка в ${country} коштує ${totalPrice} кредитів. Підтвердити?`)) {
-        alert(`Доставка в ${country} коштує ${totalPrice} кредитів.`);
-        document.getElementById('output').innerHTML += `Доставка в ${country}: ${totalPrice} кредитів.<br>`;
+    if (confirm(`Відвантаження у ${country} коштуватиме  ${totalPrice} доларів. Підтвердити?`)) {
+        alert(`Відвантаження у ${country} коштуватиме  ${totalPrice} доларів.`);
+        document.getElementById('output').innerHTML += `Відвантаження в ${country}, ${totalPrice} доларів.<br>`;
     }
 }
 
-// Виклик функції для перевірки
 getShippingMessage("Australia", 120, 50);
 getShippingMessage("Germany", 80, 20);
 getShippingMessage("Sweden", 100, 20); 
