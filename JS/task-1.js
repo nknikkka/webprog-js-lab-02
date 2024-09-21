@@ -9,3 +9,5 @@ function makeTransaction(quantity, pricePerDroid) {
 
 // Виклик функції для перевірки
 makeTransaction(5, 3000);
+makeTransaction(3, 1000);
+makeTransaction(10, 500);
